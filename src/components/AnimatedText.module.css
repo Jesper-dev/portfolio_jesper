@@ -9,11 +9,10 @@
 
 .animatedTextContent{
     color: #000000;
-    font-size: 100px;
+    font-size: 50px;
     font-weight: 600;
-    font-family: "Graduate", cursive;
-    line-height: 1.1;
-    letter-spacing: 5px;
+    font-family: 'Times New Roman', Times, cursive;
+    letter-spacing: 2px;
     text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.2);
     margin: 0;
 }
