@@ -37,5 +37,17 @@
   },
   "devDependencies": {
     "axios": "^0.21.1"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesperKYH/portfolio_jesper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesperKYH/portfolio_jesper/issues"
+  },
+  "homepage": "https://github.com/JesperKYH/portfolio_jesper#readme"
 }
