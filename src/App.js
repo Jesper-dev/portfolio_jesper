@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import AnimatedText from "./components/AnimatedText";
+import React from "react";
 import WikiSearch from "./components/wikiSearch";
 import Route from "./components/Route";
 import Header from "./components/Header"
 import Home from "./components/Home"
 
-import "./components/AnimatedText.module.css"
+import "./components/AnimatedText.module.css";
 import "./style/style.css";
 
 
@@ -26,4 +25,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
