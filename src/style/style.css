@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 body {
   padding: 0;
@@ -10,6 +11,22 @@ body {
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Roboto Slab', serif; */
   font-family: "Noto Sans JP", sans-serif;
+}
+
+body:-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
 }
 
 /*=============================================
@@ -42,9 +59,12 @@ body {
   font-size: 52px;
   margin: 0;
   color: rgb(0, 1, 66);
+  font-family: "Rubik", sans-serif;
 }
 
 .btn-about {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
   width: 160px;
   padding: 7px 7px;
   margin-top: 10%;
@@ -61,16 +81,158 @@ body {
 =============================================*/
 
 .about-container {
-  border: 1px solid black;
   margin: 0 auto;
-  height: 500px;
+  height: 700px;
   display: flex;
   justify-content: center;
-  background-color: rgb(160, 160, 160);
+  background-color: rgb(51, 51, 51);
 }
 
 .about-container > section {
-  border: 1px solid black;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 70%;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Slab", serif;
+}
+
+.about-container > section > h1 {
+  font-size: 2.2em;
+  margin-top: 3%;
+}
+
+.about-container > section > div > p {
+  font-size: 1.2rem;
+  width: 300px;
+}
+
+.about-container > section > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 700px;
+  margin-top: 10%;
+}
+
+/*=============================================
+=                Projects Content             =
+=============================================*/
+
+.projects-container {
+  height: 80vh;
+}
+
+.github-container {
+  border: 1px solid black;
+  height: 30%;
+  width: 30%;
+  margin: 30px auto;
+}
+
+.github-container > div {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 50%;
+}
+
+.work-container {
+  height: 80%;
+  width: 80%;
+  margin: 5% auto;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.work-container > h1 {
+  align-self: center;
+  justify-self: flex-start;
+  margin: 0;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
+}
+
+.work {
+  border: 1px solid black;
+  height: 90%;
+  width: 20%;
+}
+
+/*=============================================
+=                Contact Content              =
+=============================================*/
+
+.form-container {
+  margin-top: 10%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.form-container > form {
+  height: 450px;
+  width: 550px;
+  margin-bottom: 10%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-container > form > input {
   color: rgb(0, 0, 0);
+  padding: 12px;
+  width: 90%;
+  height: 5%;
+  border: 1px solid black;
+  border-radius: 8px;
+  outline: none;
+  background: none;
+  font-size: 16px;
+}
+
+.form-container > form > input::placeholder {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.form-container > form > textarea::placeholder {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.form-container > form > textarea {
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  width: 90%;
+  height: 30%;
+  border: 1px solid black;
+  border-radius: 8px;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  resize: none;
+}
+
+.form-container > form > button {
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+  width: 40%;
+  height: 10%;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border-radius: 8px;
 }
