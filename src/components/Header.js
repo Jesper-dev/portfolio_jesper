@@ -1,16 +1,20 @@
-import React from 'react'
-import Link from "./Link"
+import React from "react";
+import { Link } from "react-scroll";
 
-export default function Header() {
-    return (
-        <div className="headerLink">
-            <Link href="/" className="linkItem">
-                Home
-            </Link>
-            <Link href="/wikipediaSearch" className="linkItem">
-                WikiSearch
-            </Link>
+const name = "<JesperPettersson /> ";
 
-        </div>
-    )
-}
+const Header = () => {
+  return (
+    <div className="header">
+      <div>
+        <h1>{name}</h1>
+        <p>React, JS, Python, Freelancing</p>
+        <Link to="about" spy={true} smooth={true}>
+          <button className="btn-about">ABOUT ME</button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

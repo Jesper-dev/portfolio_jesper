@@ -1,31 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
+
 body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    background-color: #202952;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(229, 229, 229);
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-.header{
-    display: flex;
-    flex: 1 1 100px;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    border: 1px solid black;
+/*=============================================
+=               Header Content                =
+=============================================*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.headerLink{
-    display: inline-flex;
-    height: 100px;
-    width: 200px;
-    align-self: flex-start;
-    justify-self: flex-start;
-    justify-content: space-around;
+.header > div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 10%;
 }
 
-.linkItem{
-    font-style: none;
-    text-decoration: none;
-    padding: 2px 2px;
-    color: #ffffff;
+.header > div > p {
+  font-size: 24px;
+  margin: 20px;
+  color: rgb(25, 25, 25);
+}
+
+.header > div > h1 {
+  font-size: 52px;
+  margin: 0;
+  color: rgb(0, 1, 66);
+}
+
+.btn-about {
+  width: 160px;
+  padding: 7px 7px;
+  margin-top: 10%;
+  height: 40px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid rgb(4, 0, 255);
+  color: rgb(4, 0, 255);
+  outline: none;
+}
+
+/*=============================================
+=                About Me Content             =
+=============================================*/
+
+.about-container {
+  border: 1px solid black;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(160, 160, 160);
+}
+
+.about-container > section {
+  border: 1px solid black;
+  width: 70%;
+  color: rgb(0, 0, 0);
 }
