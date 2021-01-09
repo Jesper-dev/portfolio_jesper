@@ -5,18 +5,18 @@ function Footer() {
   return (
     <div className="footer-container">
       <Link className="arrow-up" to="header" spy={true} smooth={true}>
-        <i class="fas fa-arrow-up"></i>
+        <i className="fas fa-arrow-up"></i>
       </Link>
 
       <div className="icon-container">
         <a target="_blank" href="https://github.com/JesperKYH">
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </a>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/jesper-pettersson-218245179/"
         >
-          <i class="fab fa-linkedin-in"></i>
+          <i className="fab fa-linkedin-in"></i>
         </a>
       </div>
     </div>

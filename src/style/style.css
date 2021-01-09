@@ -64,16 +64,41 @@ body::-webkit-scrollbar-thumb {
 
 .btn-about {
   font-family: "Rubik", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   width: 160px;
   padding: 7px 7px;
   margin-top: 10%;
-  height: 40px;
+  height: 42px;
   background: none;
-  cursor: pointer;
   border: 2px solid rgb(4, 0, 255);
+  border-radius: 10px;
   color: rgb(4, 0, 255);
   outline: none;
+}
+
+.btn-about:hover {
+  cursor: pointer;
+  animation: bounce 1s ease-out;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 
 /*=============================================
@@ -263,8 +288,13 @@ body::-webkit-scrollbar-thumb {
 .arrow-up {
   font-size: 3rem;
   margin-bottom: 25px;
+}
+
+.arrow-up:hover {
+  font-size: 3.2rem;
   cursor: pointer;
 }
+
 .icon-container > a {
   font-size: 3rem;
   color: black;

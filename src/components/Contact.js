@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
-  const formSubmit = (event) => {
+  const onFormSubmit = (event) => {
     event.preventDefault();
   };
 
   return (
     <div className="form-container">
       <h1>Hit me up!</h1>
-      <form onSubmit={formSubmit}>
+      <form onSubmit={onFormSubmit}>
         <input type="text" placeholder="Name..."></input>
         <input type="email" placeholder="Email..."></input>
         <textarea placeholder="Message..."></textarea>
