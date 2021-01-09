@@ -163,8 +163,8 @@ body::-webkit-scrollbar-thumb {
 
 .work {
   border: 1px solid black;
-  height: 90%;
-  width: 20%;
+  height: 300px;
+  width: 450px;
 }
 
 /*=============================================
@@ -197,6 +197,7 @@ body::-webkit-scrollbar-thumb {
   height: 5%;
   border: 1px solid black;
   border-radius: 8px;
+  box-shadow: 2px 2px 3px 3px grey;
   outline: none;
   background: none;
   font-size: 16px;
@@ -219,6 +220,7 @@ body::-webkit-scrollbar-thumb {
   height: 30%;
   border: 1px solid black;
   border-radius: 8px;
+  box-shadow: 2px 2px 3px 3px grey;
   outline: none;
   background: none;
   font-size: 16px;
@@ -235,4 +237,40 @@ body::-webkit-scrollbar-thumb {
   font-size: 16px;
   background: none;
   border-radius: 8px;
+}
+
+/*=============================================
+=                Footer Content               =
+=============================================*/
+
+.footer-container {
+  height: 25vh;
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  width: 20%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.arrow-up {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.icon-container > a {
+  font-size: 3rem;
+  color: black;
+}
+
+.icon-container > a:hover {
+  font-size: 3.2rem;
+  cursor: pointer;
 }
