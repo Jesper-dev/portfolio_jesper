@@ -1,13 +1,13 @@
 import React from "react";
-import Work from "./Work";
-import quire from "../img/quire.jpg";
+import WorkCard from "./WorkCard";
+import quireLogo from "../img/quireLogo.png";
 
 const MyWork = () => {
   return (
     <div className="work-container">
       <h1>My Projects</h1>
       <div className="projects">
-        <Work img={quire} />
+        <WorkCard img={quireLogo} />
       </div>
     </div>
   );

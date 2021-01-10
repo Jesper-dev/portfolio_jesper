@@ -9,11 +9,12 @@ function Footer() {
       </Link>
 
       <div className="icon-container">
-        <a target="_blank" href="https://github.com/JesperKYH">
+        <a target="_blank" rel="noreferrer" href="https://github.com/JesperKYH">
           <i className="fab fa-github"></i>
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/jesper-pettersson-218245179/"
         >
           <i className="fab fa-linkedin-in"></i>
