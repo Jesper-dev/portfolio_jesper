@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import InfoCard from "./InfoCard";
 
-const textQuire =
-  "A note app me and my group Gutenberg did as a school assignment";
-
-const urlQuire = "http://gutenberg-quire.surge.sh/";
-
 const imgHoverStyle = {
-  opacity: "10%",
+  opacity: "50%",
 };
 
-const WorkCard = ({ img }) => {
+const WorkCard = ({ img, text, url, alt }) => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -21,12 +16,8 @@ const WorkCard = ({ img }) => {
         style={hover ? { imgHoverStyle } : null}
         className="workCard-container"
       >
-        {hover && <InfoCard text={textQuire} url={urlQuire} />}
-        <img
-          className="img"
-          src={img}
-          alt="The project Quire that i was a part of."
-        />
+        {hover && <InfoCard text={text} url={url} />}
+        <img className="img" src={img} alt={alt} />
       </div>
     </>
   );

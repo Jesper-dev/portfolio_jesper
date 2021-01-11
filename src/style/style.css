@@ -50,6 +50,12 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 10%;
 }
 
+.header > img {
+  width: 150px;
+  height: 150px;
+  align-self: flex-start;
+}
+
 .header > div > p {
   font-size: 24px;
   margin: 20px;
@@ -187,7 +193,7 @@ body::-webkit-scrollbar-thumb {
 
 .projects {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 50%;
   width: 100%;
 }
@@ -230,6 +236,7 @@ body::-webkit-scrollbar-thumb {
   height: 220px;
   border: 1px solid black;
   border-radius: 30px;
+  opacity: 90%;
 }
 
 .infoCard-container > p {
@@ -238,6 +245,7 @@ body::-webkit-scrollbar-thumb {
   font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  opacity: 100%;
 }
 
 .infoCard-container > a > button {
