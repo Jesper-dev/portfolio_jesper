@@ -5,7 +5,7 @@ const imgHoverStyle = {
   opacity: "50%",
 };
 
-const WorkCard = ({ img, text, url, alt }) => {
+const WorkCard = ({ img, text, url, alt, className }) => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const WorkCard = ({ img, text, url, alt }) => {
         className="workCard-container"
       >
         {hover && <InfoCard text={text} url={url} />}
-        <img className="img" src={img} alt={alt} />
+        <img className={className} src={img} alt={alt} />
       </div>
     </>
   );

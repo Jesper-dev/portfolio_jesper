@@ -11,13 +11,15 @@ const name = "<JesperPettersson /> ";
 
 function App() {
   return (
-    <div>
+    <>
       <Header name={name} />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+      <main>
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 }
 

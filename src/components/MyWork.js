@@ -1,19 +1,7 @@
 import React from "react";
 import WorkCard from "./WorkCard";
 import quireLogo from "../img/quireLogo.png";
-import apiLogo from "../img/apicentral.png";
-
-const textQuire =
-  "A note app me and my group Gutenberg did as a school assignment";
-
-const altQuire =
-  "A project me and my group gutenberg did as a school assignment";
-
-const textApi = "A site that shows three different apis";
-const altApi = "A website that shows three different apis";
-
-const urlQuire = "http://gutenberg-quire.surge.sh/";
-const urlApi = "http://gutenberg-api.surge.sh/";
+import apiLogo from "../img/gutenberg-api-transparent.png";
 
 const MyWork = () => {
   return (
@@ -22,14 +10,25 @@ const MyWork = () => {
       <div className="projects">
         <WorkCard
           img={quireLogo}
-          text={textQuire}
-          url={urlQuire}
-          alt={altQuire}
+          text="A note app me and my group Gutenberg did as a school assignment"
+          url="http://gutenberg-quire.surge.sh/"
+          alt="A project me and my group gutenberg did as a school assignment"
         />
-        <WorkCard img={apiLogo} text={textApi} url={urlApi} alt={altApi} />
+        <WorkCard
+          img={apiLogo}
+          text="A site that shows three different apis"
+          url="http://gutenberg-api.surge.sh/"
+          alt="http://gutenberg-api.surge.sh/"
+          className="apiLogo"
+        />
       </div>
     </div>
   );
+};
+
+const img2Style = {
+  width: "220px",
+  height: "200px",
 };
 
 export default MyWork;

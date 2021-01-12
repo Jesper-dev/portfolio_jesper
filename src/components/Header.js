@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-scroll";
 import computerMinimalist from "../img/computer.png";
+import computerScreen from "../img/computerscreen-transparent.png";
 
 const Header = ({ name }) => {
   return (
-    <div id="header" className="header">
+    <header id="header">
       <img src={computerMinimalist} />
       <div>
         <h1>{name}</h1>
@@ -13,7 +14,7 @@ const Header = ({ name }) => {
           <button className="btn-about">ABOUT ME</button>
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 
