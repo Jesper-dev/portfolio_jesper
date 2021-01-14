@@ -35,18 +35,24 @@ const Contact = () => {
       <h1>Hit me up!</h1>
       <Form onSubmit={onFormSubmit}>
         <Input
+          value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
           placeholder="Name..."
+          required
         ></Input>
         <Input
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="Email..."
+          required
         ></Input>
         <Textarea
+          value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Message..."
+          required
         ></Textarea>
         <ButtonForm>SEND EMAIL</ButtonForm>
       </Form>
@@ -56,7 +62,6 @@ const Contact = () => {
 
 const Wrapper = styled.div`
   margin-top: 10%;
-  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;

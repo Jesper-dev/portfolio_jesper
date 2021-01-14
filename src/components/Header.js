@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import computerMinimalist from "../img/computer.png";
 import computerScreen from "../img/computerscreen-transparent.png";
 import styled from "styled-components";
+import Nav from "./Nav";
 
 const Header = ({ name }) => {
   return (
@@ -32,7 +33,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-bottom: 10%;
+  margin-bottom: 22%;
   color: white;
 `;
 
@@ -59,6 +60,26 @@ const Button = styled.button`
   &:hover {
     cursor: pointer;
     animation: bounce 1s ease-out;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    60%,
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
   }
 `;
 
