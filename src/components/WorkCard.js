@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import InfoCard from "./InfoCard";
 
 const imgHoverStyle = {
@@ -10,17 +11,27 @@ const WorkCard = ({ img, text, url, alt, className }) => {
 
   return (
     <>
-      <div
+      <Wrapper
         onMouseEnter={() => setHover(!hover)}
         onMouseLeave={() => setHover(!hover)}
         style={hover ? { imgHoverStyle } : null}
-        className="workCard-container"
       >
         {hover && <InfoCard text={text} url={url} />}
         <img className={className} src={img} alt={alt} />
-      </div>
+      </Wrapper>
     </>
   );
 };
+
+const Wrapper = styled.div`
+  background-color: rgb(76, 76, 76);
+  border: 1px solid rgb(4, 0, 255);
+  border-radius: 30px;
+  width: 400px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default WorkCard;

@@ -1,14 +1,19 @@
 import React from "react";
+import styled from "styled-components";
 import GithubApi from "./GithubApi";
 import MyWork from "./MyWork";
 
 const Projects = () => {
   return (
-    <div className="projects-container">
+    <ProjectsWrapper>
       <MyWork />
       <GithubApi />
-    </div>
+    </ProjectsWrapper>
   );
 };
+
+const ProjectsWrapper = styled.div`
+  height: 80vh;
+`;
 
 export default Projects;

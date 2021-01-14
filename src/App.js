@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 
 import "./style/style.css";
+import "./style/media.css";
 
 const name = "<JesperPettersson /> ";
 

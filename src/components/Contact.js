@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 const Contact = () => {
   const [message, setMessage] = useState("");
@@ -8,46 +9,122 @@ const Contact = () => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     console.log(message, name, email);
-    const templateId = "template_6uvtk0r";
-    sendEmail(templateId, {
-      message: message,
-      from_name: name,
-      from_email: email,
-      to_name: "Jesper",
-    });
+    // const templateId = "template_6uvtk0r";
+    // sendEmail(templateId, {
+    //   message: message,
+    //   from_name: name,
+    //   from_email: email,
+    //   to_name: "Jesper",
+    // });
+    setEmail("");
+    setMessage("");
+    setName("");
   };
 
-  const sendEmail = (templateId, varibles) => {
-    window.emailjs
-      .send("service_sndqnnb", templateId, varibles)
-      .then((res) => {
-        console.log("Email was send", res);
-      })
-      .catch((err) => console.log("Error was: ", err));
-  };
+  // const sendEmail = (templateId, varibles) => {
+  //   window.emailjs
+  //     .send("service_sndqnnb", templateId, varibles)
+  //     .then((res) => {
+  //       console.log("Email was send", res);
+  //     })
+  //     .catch((err) => console.log("Error was: ", err));
+  // };
 
   return (
-    <div className="form-container">
+    <Wrapper>
       <h1>Hit me up!</h1>
-      <form onSubmit={onFormSubmit}>
-        <input
+      <Form onSubmit={onFormSubmit}>
+        <Input
           onChange={(e) => setName(e.target.value)}
           type="text"
           placeholder="Name..."
-        ></input>
-        <input
+        ></Input>
+        <Input
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="Email..."
-        ></input>
-        <textarea
+        ></Input>
+        <Textarea
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Message..."
-        ></textarea>
-        <button>SEND EMAIL</button>
-      </form>
-    </div>
+        ></Textarea>
+        <ButtonForm>SEND EMAIL</ButtonForm>
+      </Form>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  margin-top: 10%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const Form = styled.form`
+  font-family: "Rubik", sans-serif;
+  height: 450px;
+  width: 550px;
+  margin-bottom: 10%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+const Input = styled.input`
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  width: 90%;
+  height: 5%;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px 3px grey;
+  outline: none;
+  background: none;
+  font-size: 16px;
+
+  &:placeholder {
+    font-family: "Rubik", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+`;
+
+const Textarea = styled.textarea`
+  font-family: "Rubik", sans-serif;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  width: 90%;
+  height: 30%;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px 3px grey;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  resize: none;
+
+  &:placeholder {
+    font-family: "Rubik", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+`;
+
+const ButtonForm = styled.button`
+  font-family: "Rubik", sans-serif;
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+  width: 40%;
+  height: 10%;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border-radius: 8px;
+`;
 
 export default Contact;
