@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const Nav = () => {
   return (
-    <NavWrapper>
+    <NavWrapper id="header">
+      <A href="/">HOME</A>
       <A href="/githubapi">GitHubAPI</A>
-      <A href="/">Home</A>
     </NavWrapper>
   );
 };
@@ -19,6 +19,12 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    height: 70px;
+    justify-content: space-around;
+  }
 `;
 
 const A = styled.a`
@@ -32,6 +38,21 @@ const A = styled.a`
   text-align: center;
   width: 100px;
   color: rgb(4, 0, 255);
+
+  &:hover {
+    width: 105px;
+    transition: width 0.2s ease-in;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 16px;
+    width: 100px;
+
+    &:hover {
+      width: 100px;
+      transition: none;
+    }
+  }
 `;
 
 export default Nav;

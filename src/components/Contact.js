@@ -61,11 +61,18 @@ const Contact = () => {
 };
 
 const Wrapper = styled.div`
-  margin-top: 10%;
+  margin-top: 7%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: 400px) {
+    width: 100vw;
+    margin-top: 0%;
+    /* margin-bottom: 10%; */
+    height: 100vh;
+  }
 `;
 
 const Form = styled.form`
@@ -77,6 +84,10 @@ const Form = styled.form`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 400px) {
+    width: 300px;
+  }
 `;
 
 const Input = styled.input`

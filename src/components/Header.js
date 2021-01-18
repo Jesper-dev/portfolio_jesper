@@ -7,7 +7,7 @@ import Nav from "./Nav";
 
 const Header = ({ name }) => {
   return (
-    <HeaderWrapper id="header">
+    <HeaderWrapper>
       <Image src={computerMinimalist} />
       <Wrapper>
         <Title>{name}</Title>
@@ -27,6 +27,11 @@ const HeaderWrapper = styled.header`
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  @media (max-width: 400px) {
+    height: 100vh;
+    width: 100vw;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -42,6 +47,10 @@ const Title = styled.h1`
   margin: 0;
   color: rgb(0, 1, 66);
   font-family: "Rubik", sans-serif;
+
+  @media (max-width: 400px) {
+    font-size: 34px;
+  }
 `;
 
 const Button = styled.button`
@@ -60,6 +69,13 @@ const Button = styled.button`
   &:hover {
     cursor: pointer;
     animation: bounce 1s ease-out;
+  }
+
+  @media (max-width: 400px) {
+    &:hover {
+      cursor: none;
+      animation: none;
+    }
   }
 
   @keyframes bounce {
@@ -87,12 +103,20 @@ const Text = styled.p`
   font-size: 24px;
   margin: 20px;
   color: rgb(25, 25, 25);
+
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 `;
 
 const Image = styled.img`
   width: 150px;
   height: 150px;
   align-self: flex-start;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export default Header;

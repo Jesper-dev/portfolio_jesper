@@ -29,13 +29,17 @@ function Footer() {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
   height: 25vh;
   background-color: rgb(51, 51, 51);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 400px) {
+    width: 100vw;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -44,6 +48,11 @@ const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 400px) {
+    height: 50px;
+    width: 200px;
+  }
 `;
 
 const Icon = styled.a`
@@ -54,6 +63,15 @@ const Icon = styled.a`
     font-size: 3.2rem;
     cursor: pointer;
   }
+
+  @media (max-width: 400px) {
+    font-size: 3.6rem;
+
+    &:hover {
+      font-size: 3.6rem;
+      cursor: none;
+    }
+  }
 `;
 
 const ArrowUp = styled.i`
@@ -63,6 +81,15 @@ const ArrowUp = styled.i`
   &:hover {
     font-size: 3.2rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 3.6rem;
+
+    &:hover {
+      font-size: 3.6rem;
+      cursor: none;
+    }
   }
 `;
 

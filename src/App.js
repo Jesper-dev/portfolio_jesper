@@ -24,10 +24,15 @@ const GlobalStyle = createGlobalStyle`
 body{
   padding: 0;
   margin: 0;
+  width: 100vw;
   background-color: rgb(229, 229, 229);
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Roboto Slab', serif; */
   font-family: "Noto Sans JP", sans-serif;
+
+  @media (max-width: 400px) {
+    max-width: 100vmax;
+  }
 }
 
 &:-webkit-scrollbar-track{

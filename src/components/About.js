@@ -40,6 +40,12 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgb(51, 51, 51);
+
+  @media (max-width: 400px) {
+    height: 100vh;
+    width: 100vw;
+    flex-flow: column nowrap;
+  }
 `;
 
 const Wrapper2 = styled.div`
@@ -48,6 +54,11 @@ const Wrapper2 = styled.div`
   justify-content: space-between;
   width: 1100px;
   margin-top: 4%;
+
+  @media (max-width: 400px) {
+    width: 320px;
+    height: 80vh;
+  }
 `;
 
 const Section = styled.section`
@@ -57,21 +68,38 @@ const Section = styled.section`
   width: 70%;
   color: rgb(255, 255, 255);
   font-family: "Roboto Slab", serif;
+
+  @media (max-width: 400px) {
+    width: 100vw;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 2.2em;
   margin-top: 3%;
+
+  @media (max-width: 400px) {
+    font-size: 2em;
+  }
 `;
 
 const Text = styled.p`
   font-size: 1.2rem;
   width: 550px;
+
+  @media (max-width: 400px) {
+    width: 400px;
+    font-size: 1rem;
+  }
 `;
 
 const Image = styled.img`
   border-radius: 20px;
   box-shadow: 2px 2px 5px 5px black;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export default About;

@@ -17,7 +17,7 @@ const WorkCard = ({ img, text, url, alt, className }) => {
         style={hover ? { imgHoverStyle } : null}
       >
         {hover && <InfoCard text={text} url={url} />}
-        <img className={className} src={img} alt={alt} />
+        <Img className={className} src={img} alt={alt} />
       </Wrapper>
     </>
   );
@@ -32,6 +32,18 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 400px) {
+    width: 220px;
+    height: 150px;
+  }
+`;
+
+const Img = styled.img`
+  @media (max-width: 400px) {
+    width: 220px;
+    height: 140px;
+  }
 `;
 
 export default WorkCard;

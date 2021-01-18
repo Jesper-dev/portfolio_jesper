@@ -36,6 +36,10 @@ const Wrapper = styled.div`
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 400px) {
+    height: 100%;
+  }
 `;
 
 const ProjectsWrapper = styled.div`
@@ -43,6 +47,13 @@ const ProjectsWrapper = styled.div`
   justify-content: space-evenly;
   height: 50%;
   width: 100%;
+
+  @media (max-width: 400px) {
+    height: 80%;
+    width: 100vw;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
