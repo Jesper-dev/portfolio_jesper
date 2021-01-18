@@ -18,8 +18,8 @@ const Home = () => {
         <About />
         <Projects />
         <Contact />
-        <Footer />
       </Main>
+      <Footer />
     </>
   );
 };

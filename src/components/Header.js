@@ -11,7 +11,7 @@ const Header = ({ name }) => {
       <Image src={computerMinimalist} />
       <Wrapper>
         <Title>{name}</Title>
-        <Text>React JS Front-End Dev</Text>
+        <Text>React | JavaScript | Front-End</Text>
         <Link to="about" spy={true} smooth={true}>
           <Button>ABOUT ME</Button>
         </Link>

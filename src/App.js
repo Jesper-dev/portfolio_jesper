@@ -1,7 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Home from "./components/Home";
-import GithubApi from "./components/GithubApi";
+import GithubApiPage from "./components/GithubApiPage";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/githubapi">
-          <GithubApi />
+          <GithubApiPage />
         </Route>
       </Router>
     </>
@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
 body{
   padding: 0;
   margin: 0;
-  width: 100vw;
   background-color: rgb(229, 229, 229);
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Roboto Slab', serif; */

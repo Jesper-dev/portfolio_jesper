@@ -9,6 +9,7 @@ const Contact = () => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     console.log(message, name, email);
+    //*Kommentera ut när det är dags för deploy
     // const templateId = "template_6uvtk0r";
     // sendEmail(templateId, {
     //   message: message,
@@ -21,6 +22,7 @@ const Contact = () => {
     setName("");
   };
 
+  //*Kommentera ut när det är dags för deploy
   // const sendEmail = (templateId, varibles) => {
   //   window.emailjs
   //     .send("service_sndqnnb", templateId, varibles)
