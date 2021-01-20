@@ -45,7 +45,9 @@ const GithubApi = () => {
                   {item.name}
                 </A>{" "}
               </TextName>
-              <TextPushed>Pushed at: {item.pushed_at}</TextPushed>
+              <Language>
+                Language: <LanguageSpan>{item.language}</LanguageSpan>
+              </Language>
             </RepoItem>
           );
         })}
@@ -99,7 +101,7 @@ const RepoWrapper = styled.div`
 `;
 
 const RepoItem = styled.div`
-  border: 2px solid blue;
+  border: 2px solid #09015f;
   border-radius: 20px;
   margin: 5px 0px;
   padding: 5px 5px;
@@ -107,7 +109,7 @@ const RepoItem = styled.div`
 `;
 
 const A = styled.a`
-  color: blue;
+  color: #af0069;
   text-decoration: none;
   font-size: 1.2rem;
 
@@ -121,8 +123,13 @@ const TextName = styled.p`
   font-size: 1.2rem;
 `;
 
-const TextPushed = styled.p`
+const Language = styled.p`
   font-size: 1.2rem;
+`;
+
+const LanguageSpan = styled.span`
+  font-weight: bold;
+  color: #af0069;
 `;
 
 export default GithubApi;
