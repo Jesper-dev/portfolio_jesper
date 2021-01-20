@@ -27,6 +27,11 @@ const Wrapper = styled.div`
   border: 1px solid black;
   border-radius: 30px;
   opacity: 90%;
+
+  @media (max-width: 400px) {
+    height: inherit;
+    width: inherit;
+  }
 `;
 
 const Text = styled.p`
@@ -36,6 +41,12 @@ const Text = styled.p`
   font-size: 1.5rem;
   font-weight: bold;
   opacity: 100%;
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+    width: 150px;
+    margin-bottom: 0;
+  }
 `;
 
 const Button = styled.button`
@@ -51,6 +62,15 @@ const Button = styled.button`
   color: rgb(229, 229, 229);
   outline: none;
   cursor: pointer;
+
+  @media (max-width: 400px) {
+    cursor: none;
+    padding: 2px 2px;
+    width: 140px;
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 10%;
+  }
 `;
 
 export default InfoCard;
