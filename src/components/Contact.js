@@ -96,18 +96,17 @@ const Input = styled.input`
   color: rgb(0, 0, 0);
   padding: 12px;
   width: 90%;
-  height: 5%;
+  height: 7%;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 2px 2px 3px 3px grey;
   outline: none;
   background: none;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
 
-  &:placeholder {
-    font-family: "Rubik", sans-serif;
+  &::placeholder {
     color: rgb(0, 0, 0);
-    font-size: 16px;
   }
 `;
 
@@ -122,13 +121,12 @@ const Textarea = styled.textarea`
   box-shadow: 2px 2px 3px 3px grey;
   outline: none;
   background: none;
-  font-size: 16px;
+  font-size: 18px;
   resize: none;
+  font-family: "Rubik", sans-serif;
 
-  &:placeholder {
-    font-family: "Rubik", sans-serif;
+  &::placeholder {
     color: rgb(0, 0, 0);
-    font-size: 16px;
   }
 `;
 
@@ -140,9 +138,10 @@ const ButtonForm = styled.button`
   width: 40%;
   height: 10%;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   background: none;
   border-radius: 8px;
+  box-shadow: 2px 2px 3px 3px grey;
 `;
 
 export default Contact;

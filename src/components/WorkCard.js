@@ -3,7 +3,7 @@ import styled from "styled-components";
 import InfoCard from "./InfoCard";
 
 const imgHoverStyle = {
-  opacity: "50%",
+  opacity: "100%",
 };
 
 const WorkCard = ({ img, text, url, alt, className }) => {
