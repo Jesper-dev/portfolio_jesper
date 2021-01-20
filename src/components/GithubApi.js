@@ -29,8 +29,8 @@ const GithubApi = () => {
 
   return (
     <>
+      <Title>GithubAPI</Title>
       <Wrapper>
-        <Title>GithubAPI</Title>
         <Name>{name}</Name>
         <Img src={img} />
         <Bio>{bio}</Bio>
@@ -61,24 +61,30 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 500px;
   flex-flow: column nowrap;
-  background-color: grey;
+  background-color: #173747;
+  font-family: "Rubik", sans-serif;
 `;
 
 const Title = styled.h1`
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 `;
 
 const Name = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
 `;
 
 const Img = styled.img`
   width: 250px;
   height: 250px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px 5px black;
 `;
 
 const Bio = styled.p`
   width: 280px;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
 `;
 
 const RepoWrapper = styled.div`
@@ -86,9 +92,10 @@ const RepoWrapper = styled.div`
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  max-height: 500px;
-  max-width: 800px;
+  max-height: 100vh;
+  max-width: 80vw;
   margin-top: 5%;
+  font-family: "Rubik", sans-serif;
 `;
 
 const RepoItem = styled.div`
