@@ -8,6 +8,7 @@ const GithubApi = () => {
   const [img, setImg] = useState({});
   const [bio, setBio] = useState("");
   const [repo, setRepo] = useState([]);
+  const [url, setUrl] = useState("")
 
   useEffect(() => {
     axios
@@ -16,6 +17,7 @@ const GithubApi = () => {
         setName(res.data.name);
         setImg(res.data.avatar_url);
         setBio(res.data.bio);
+        setUrl(res.data.html_url)
         console.log(res.data)
       })
       .catch((err) => console.log(err));
@@ -32,7 +34,7 @@ const GithubApi = () => {
     <>
       <Title>GithubAPI</Title>
       <Wrapper>
-        <Name>{name}</Name>
+        <Name><AName target="_blank" rel="noreferrer" href={url}>{name}</AName></Name>
         <Img src={img} />
         <Bio>{bio}</Bio>
       </Wrapper>
@@ -131,6 +133,11 @@ const Language = styled.p`
 const LanguageSpan = styled.span`
   font-weight: bold;
   color: #af0069;
+`;
+
+const AName = styled.a`
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 `;
 
 export default GithubApi;
