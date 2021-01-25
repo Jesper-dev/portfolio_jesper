@@ -5,36 +5,43 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [show, setShow] = useState(false)
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     console.log(message, name, email);
-    //*Kommentera ut när det är dags för deploy
-    // const templateId = "template_6uvtk0r";
-    // sendEmail(templateId, {
-    //   message: message,
-    //   from_name: name,
-    //   from_email: email,
-    //   to_name: "Jesper",
-    // });
+    
+    const templateId = "template_6uvtk0r";
+    sendEmail(templateId, {
+      message: message,
+      from_name: name,
+      from_email: email,
+      to_name: "Jesper",
+    });
     setEmail("");
     setMessage("");
     setName("");
+    setShow(true)
+
+    setTimeout(() => {
+      setShow(false)
+    }, 3000);
   };
 
-  //*Kommentera ut när det är dags för deploy
-  // const sendEmail = (templateId, varibles) => {
-  //   window.emailjs
-  //     .send("service_sndqnnb", templateId, varibles)
-  //     .then((res) => {
-  //       console.log("Email was send", res);
-  //     })
-  //     .catch((err) => console.log("Error was: ", err));
-  // };
+  
+  const sendEmail = (templateId, varibles) => {
+    window.emailjs
+      .send("service_sndqnnb", templateId, varibles)
+      .then((res) => {
+        console.log("Email was send", res);
+      })
+      .catch((err) => console.log("Error was: ", err));
+  };
 
   return (
     <Wrapper>
       <h1>Hit me up!</h1>
+      <VerSpan style={show ? {display: "inline"} : {display: "none"}}>Message Sent! I will get back to you shortly...</VerSpan>
       <Form onSubmit={onFormSubmit}>
         <Input
           value={name}
@@ -147,5 +154,10 @@ const ButtonForm = styled.button`
     font-size: 16px;
   }
 `;
+
+const VerSpan = styled.span`
+  color: green;
+  font-size: 1.5rem;
+`
 
 export default Contact;
