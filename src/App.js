@@ -2,19 +2,25 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Home from "./components/Home";
 import GithubApiPage from "./components/GithubApiPage";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Router>
         <GlobalStyle />
+        <Link to="/"></Link>
+        <Link to="/githubapi"></Link>
+
+        <Switch>
         <Route exact path="/">
-          <Home />
+          <Home/>
         </Route>
+        
         <Route exact path="/githubapi">
-          <GithubApiPage />
+          <GithubApiPage/>
         </Route>
+        </Switch>  
       </Router>
     </>
   );
