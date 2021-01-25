@@ -158,6 +158,11 @@ const ButtonForm = styled.button`
 const VerSpan = styled.span`
   color: green;
   font-size: 1.5rem;
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+
+  }
 `
 
 export default Contact;
