@@ -16,6 +16,7 @@ const GithubApi = () => {
         setName(res.data.name);
         setImg(res.data.avatar_url);
         setBio(res.data.bio);
+        console.log(res.data)
       })
       .catch((err) => console.log(err));
 

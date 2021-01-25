@@ -3,12 +3,10 @@ import { Link } from "react-scroll";
 import computerMinimalist from "../img/computer.png";
 import computerScreen from "../img/computerscreen-transparent.png";
 import styled from "styled-components";
-import Nav from "./Nav";
 
 const Header = ({ name }) => {
   return (
     <HeaderWrapper>
-      <Image src={computerMinimalist} />
       <Wrapper>
         <Title>{name}</Title>
         <Text>React | JavaScript | Front-End</Text>
@@ -38,7 +36,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-bottom: 22%;
+  margin-bottom: 10%;
   color: white;
 `;
 
