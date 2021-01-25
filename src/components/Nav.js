@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from "react-router-dom"
 
 const Nav = () => {
   return (
     <NavWrapper id="header">
-      <A href="/">HOME</A>
-      <A href="/githubapi">GitHubAPI</A>
+      <Link to="/"><A href="/">HOME</A></Link>
+      <Link to="/githubapi"><A href="/githubapi">GitHubAPI</A></Link>
     </NavWrapper>
   );
 };
