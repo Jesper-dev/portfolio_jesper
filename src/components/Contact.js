@@ -142,6 +142,10 @@ const ButtonForm = styled.button`
   background: none;
   border-radius: 8px;
   box-shadow: 2px 2px 3px 3px grey;
+
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `;
 
 export default Contact;
