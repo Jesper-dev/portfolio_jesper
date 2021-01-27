@@ -5,8 +5,8 @@ import {Link} from "react-router-dom"
 const Nav = () => {
   return (
     <NavWrapper id="header">
-      <Link to="/"><A href="/">HOME</A></Link>
-      <Link to="/githubapi"><A href="/githubapi">GitHubAPI</A></Link>
+      <Link style={{textDecoration: "none"}} to="/"><A href="/">HOME</A></Link>
+      <Link style={{textDecoration: "none"}} to="/githubapi"><A href="/githubapi">GitHubAPI</A></Link>
     </NavWrapper>
   );
 };
