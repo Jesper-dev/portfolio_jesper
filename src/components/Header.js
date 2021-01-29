@@ -3,13 +3,16 @@ import { Link } from "react-scroll";
 import computerMinimalist from "../img/computer.png";
 import computerScreen from "../img/computerscreen-transparent.png";
 import styled from "styled-components";
+import TextChanger from "./TextChanger";
 
 const Header = ({ name }) => {
   return (
     <HeaderWrapper>
       <Wrapper>
         <Title>{name}</Title>
-        <Text>React | JavaScript | Front-End</Text>
+        <Text>
+          <TextChanger />
+        </Text>
         <Link to="about" spy={true} smooth={true}>
           <Button>ABOUT ME</Button>
         </Link>
@@ -98,9 +101,7 @@ const Button = styled.button`
 `;
 
 const Text = styled.p`
-  font-size: 24px;
-  margin: 20px;
-  color: rgb(25, 25, 25);
+  margin: 10px;
 
   @media (max-width: 400px) {
     font-size: 20px;
