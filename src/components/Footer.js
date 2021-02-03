@@ -68,7 +68,7 @@ const Icon = styled.a`
   }
 
   @media (max-width: 400px) {
-    font-size: 3.6rem;
+    font-size: 2.8rem;
 
     &:hover {
       font-size: 3.6rem;
