@@ -110,14 +110,4 @@ const Text = styled.p`
   }
 `;
 
-// const Image = styled.img`
-//   width: 150px;
-//   height: 150px;
-//   align-self: flex-start;
-
-//   @media (max-width: 400px) {
-//     display: none;
-//   }
-// `;
-
 export default Header;

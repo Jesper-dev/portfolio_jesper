@@ -40,7 +40,7 @@ const Wrapper = styled.div`
   height: 700px;
   display: flex;
   justify-content: center;
-  background-color: rgb(51, 51, 51);
+  background-color: #222831;
 
   @media (max-width: 400px) {
     height: 100vh;
@@ -96,7 +96,7 @@ const Text = styled.p`
 
 const Image = styled.img`
   border-radius: 20px;
-  box-shadow: 2px 2px 5px 5px black;
+  box-shadow: 1px 1px 3px 3px grey;
 
   @media (max-width: 400px) {
     display: none;

@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <h1>Hit me up!</h1>
+      <Title>Hit me up!</Title>
       <VerSpan style={show ? {display: "inline"} : {display: "none"}}>Message Sent! I will get back to you shortly...</VerSpan>
       <Form onSubmit={onFormSubmit}>
         <Input
@@ -70,25 +70,33 @@ const Contact = () => {
 };
 
 const Wrapper = styled.div`
-  margin-top: 7%;
+  margin-top: 0%;
+  height: 90vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
+  background-color: #222831;
+  clip-path: polygon(0 0, 100% 27%, 100% 100%, 0 100%, 0% 38%);
 
   @media (max-width: 400px) {
     width: 100vw;
     margin-top: 0%;
     /* margin-bottom: 10%; */
     height: 100vh;
+    clip-path: none;
   }
 `;
+
+const Title = styled.h1`
+  color: #fff;
+`
 
 const Form = styled.form`
   font-family: "Rubik", sans-serif;
   height: 450px;
   width: 550px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -96,6 +104,7 @@ const Form = styled.form`
 
   @media (max-width: 400px) {
     width: 300px;
+    margin-bottom: 10%;
   }
 `;
 
@@ -104,16 +113,17 @@ const Input = styled.input`
   padding: 12px;
   width: 90%;
   height: 7%;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: #fff;
   border-radius: 8px;
-  box-shadow: 2px 2px 3px 3px grey;
+  box-shadow: 1px 1px 3px 3px white;
   outline: none;
   background: none;
   font-size: 18px;
   font-family: "Rubik", sans-serif;
 
   &::placeholder {
-    color: rgb(0, 0, 0);
+    color: #fff;
   }
 `;
 
@@ -123,9 +133,10 @@ const Textarea = styled.textarea`
   padding: 12px;
   width: 90%;
   height: 30%;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: #fff;
   border-radius: 8px;
-  box-shadow: 2px 2px 3px 3px grey;
+  box-shadow: 1px 1px 3px 3px white;
   outline: none;
   background: none;
   font-size: 18px;
@@ -134,12 +145,14 @@ const Textarea = styled.textarea`
 
   &::placeholder {
     color: rgb(0, 0, 0);
+    color: #fff;
   }
 `;
 
 const ButtonForm = styled.button`
   font-family: "Rubik", sans-serif;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: #fff;
   outline: none;
   padding: 10px;
   width: 40%;
@@ -148,7 +161,7 @@ const ButtonForm = styled.button`
   font-size: 18px;
   background: none;
   border-radius: 8px;
-  box-shadow: 2px 2px 3px 3px grey;
+  box-shadow: 1px 1px 3px 3px white;
 
   @media (max-width: 400px) {
     font-size: 16px;

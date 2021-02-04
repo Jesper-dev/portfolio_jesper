@@ -11,7 +11,7 @@ const Projects = () => {
 };
 
 const ProjectsWrapper = styled.div`
-  height: 50vh;
+  height: 80vh;
   @media (max-width: 400px) {
     height: 100vh;
     width: 100vw;

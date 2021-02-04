@@ -66,7 +66,7 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 500px;
   flex-flow: column nowrap;
-  background-color: #173747;
+  background-color: #222831;
   font-family: "Rubik", sans-serif;
 `;
 

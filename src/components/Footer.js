@@ -34,7 +34,8 @@ function Footer() {
 
 const Wrapper = styled.footer`
   height: 25vh;
-  background-color: rgb(51, 51, 51);
+  /* background-color: rgb(51, 51, 51); */
+  background-color: #0f0f0f;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -60,7 +61,7 @@ const IconWrapper = styled.div`
 
 const Icon = styled.a`
   font-size: 3rem;
-  color: black;
+  color: #dfe0df;
 
   &:hover {
     font-size: 3.2rem;
@@ -80,6 +81,7 @@ const Icon = styled.a`
 const ArrowUp = styled.i`
   font-size: 3rem;
   margin-bottom: 25px;
+  color: #dfe0df;
 
   &:hover {
     font-size: 3.2rem;
@@ -87,10 +89,10 @@ const ArrowUp = styled.i`
   }
 
   @media (max-width: 400px) {
-    font-size: 3.6rem;
+    font-size: 3.5rem;
 
     &:hover {
-      font-size: 3.6rem;
+      font-size: 3.5rem;
       cursor: none;
     }
   }
