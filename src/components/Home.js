@@ -7,13 +7,11 @@ import Projects from "./Projects/Projects";
 import Nav from "./Nav";
 import styled from "styled-components";
 
-const name = "<JesperPettersson /> ";
-
 const Home = () => {
   return (
     <>
       <Nav />
-      <Header name={name} />
+      <Header />
       <Main>
         <About />
         <Projects />

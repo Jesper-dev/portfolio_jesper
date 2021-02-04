@@ -5,7 +5,9 @@ import computerScreen from "../img/computerscreen-transparent.png";
 import styled from "styled-components";
 import TextChanger from "./TextChanger";
 
-const Header = ({ name }) => {
+const name = "<JesperPettersson />";
+
+const Header = () => {
   return (
     <HeaderWrapper>
       <Wrapper>
@@ -108,14 +110,14 @@ const Text = styled.p`
   }
 `;
 
-const Image = styled.img`
-  width: 150px;
-  height: 150px;
-  align-self: flex-start;
+// const Image = styled.img`
+//   width: 150px;
+//   height: 150px;
+//   align-self: flex-start;
 
-  @media (max-width: 400px) {
-    display: none;
-  }
-`;
+//   @media (max-width: 400px) {
+//     display: none;
+//   }
+// `;
 
 export default Header;

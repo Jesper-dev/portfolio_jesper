@@ -13,14 +13,14 @@ function App() {
         <Link to="/githubapi"></Link>
 
         <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        
-        <Route exact path="/githubapi">
-          <GithubApiPage/>
-        </Route>
-        </Switch>  
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/githubapi">
+            <GithubApiPage />
+          </Route>
+        </Switch>
       </Router>
     </>
   );
@@ -31,8 +31,6 @@ body{
   padding: 0;
   margin: 0;
   background-color: rgb(229, 229, 229);
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Roboto Slab', serif; */
   font-family: "Noto Sans JP", sans-serif;
 
   @media (max-width: 400px) {

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
-const texts = ["React", "JavaScript", "Front-End"];
-
 const TextChanger = () => {
   const [index, setIndex] = useState(0);
+
+  const texts = ["React", "JavaScript", "Front-End"];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -26,8 +26,9 @@ const TextChanger = () => {
 
 const style = {
   color: "rgb(0, 1, 66)",
-  fontSize: "1.5rem",
+  fontSize: "1.7rem",
   height: "2%",
+  fontWeight: "bold",
 };
 
 export default TextChanger;
