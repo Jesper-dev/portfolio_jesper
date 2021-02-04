@@ -7,6 +7,7 @@ const About = () => {
     <Wrapper id="about">
       <Section>
         <Title>Hi, nice to meet you!</Title>
+
         <Wrapper2>
           <Image
             src={profile}
@@ -14,16 +15,19 @@ const About = () => {
             width="350"
             height="350"
           />
+
           <Text>
-            Hello! My name is Jesper Pettersson. I'm currently studying to become a
-            front-end developer at KYH in Stockholm. I have always had an interest in
-            programming but it wasn't until recently, in 2020, that I decided to actually
-            study programming and try to become a front-end developer. <br /> <br />
-            I already have knowledge in JavaScript and React, but my next goal is to
-            learn Redux and Python.<br /> <br />
-            Down below you can find my finished work and I also have a Github page
-            where you can find a list of my repos. I look forward to hearing from
-            you and I hope we can achieve amazing things together!
+            Hello! My name is Jesper Pettersson. I'm currently studying to
+            become a front-end developer at KYH in Stockholm. I have always had
+            an interest in programming but it wasn't until recently, in 2020,
+            that I decided to actually study programming and try to become a
+            front-end developer. <br /> <br />
+            I already have knowledge in JavaScript and React, but my next goal
+            is to learn Redux and Python.
+            <br /> <br />
+            Down below you can find my finished work and I also have a Github
+            page where you can find a list of my repos. I look forward to
+            hearing from you and I hope we can achieve amazing things together!
           </Text>
         </Wrapper2>
       </Section>

@@ -3,7 +3,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Header from "./Header";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Nav from "./Nav";
 import styled from "styled-components";
 

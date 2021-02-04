@@ -54,7 +54,7 @@ const IconWrapper = styled.div`
 
   @media (max-width: 400px) {
     height: 50px;
-    width: 200px;
+    width: 300px;
   }
 `;
 
@@ -71,7 +71,7 @@ const Icon = styled.a`
     font-size: 2.8rem;
 
     &:hover {
-      font-size: 3.6rem;
+      font-size: 2.8rem;
       cursor: none;
     }
   }

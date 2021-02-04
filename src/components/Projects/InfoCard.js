@@ -1,32 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const InfoCard = ({ text, url }) => {
+const InfoCard = ({ text, url, icon }) => {
+  const [hover, setHover] = useState(false);
   return (
     <Wrapper>
       <Text>{text}</Text>
+
       <a target="_blank" rel="noreferrer" href={url}>
-        <Button onClick={() => console.log("Clicked")}>
-          Visit website <i className="fas fa-arrow-right"></i>
+        <Button
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
+          Visit website {hover ? <i className="fas fa-arrow-right"></i> : ""}
         </Button>
       </a>
+      <IconWrapper>{icon}</IconWrapper>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  background-color: rgb(51, 51, 51);
-  position: absolute;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  width: 400px;
-  height: 220px;
-  border: 1px solid black;
-  border-radius: 30px;
-  opacity: 90%;
+  width: 340px;
+  height: 160px;
 
   @media (max-width: 400px) {
     height: inherit;
@@ -45,7 +45,7 @@ const Text = styled.p`
   @media (max-width: 400px) {
     font-size: 1rem;
     width: 150px;
-    margin-bottom: 0;
+    margin: 0;
   }
 `;
 
@@ -54,7 +54,6 @@ const Button = styled.button`
   font-size: 18px;
   width: 160px;
   padding: 7px 7px;
-  margin-top: 10%;
   height: 42px;
   background: none;
   border: 2px solid rgb(255, 255, 255);
@@ -66,10 +65,21 @@ const Button = styled.button`
   @media (max-width: 400px) {
     cursor: none;
     padding: 2px 2px;
-    width: 140px;
+    width: 120px;
     height: 35px;
     font-size: 16px;
-    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+`;
+
+const IconWrapper = styled.div`
+  width: 90%;
+  height: 30px;
+  display: flex;
+  flex-flow: row wrap;
+
+  @media (max-width: 400px) {
+    height: 20px;
   }
 `;
 
