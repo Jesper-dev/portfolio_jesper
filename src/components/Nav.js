@@ -5,8 +5,8 @@ import {Link} from "react-router-dom"
 const Nav = () => {
   return (
     <NavWrapper id="header">
-      <Link style={{textDecoration: "none"}} to="/"><A href="/">HOME</A></Link>
-      <Link style={{textDecoration: "none"}} to="/githubapi"><A href="/githubapi">GitHubAPI</A></Link>
+      <A href="/"><Link style={{textDecoration: "none", color: "#0400ff"}} to="/">HOME</Link></A>
+      <A href="/githubapi"><Link style={{textDecoration: "none", color: "#0400ff"}} to="/githubapi">GitHubAPI</Link></A>
     </NavWrapper>
   );
 };
@@ -28,7 +28,7 @@ const NavWrapper = styled.nav`
   }
 `;
 
-const A = styled.a`
+const A = styled.button`
   font-family: "Rubik", sans-serif;
   padding: 7px 7px;
   background: none;

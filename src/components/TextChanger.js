@@ -3,14 +3,21 @@ import TextTransition, { presets } from "react-text-transition";
 
 const TextChanger = () => {
   const [index, setIndex] = useState(0);
+  const [didMount, setDidMount] = useState(false);
 
   const texts = ["React", "JavaScript", "Front-End"];
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    setDidMount(true);
+    setInterval(() => {
       setIndex((index) => index + 1);
     }, 4000);
-  }, []);
+
+    return () => {
+      setDidMount(false);
+      console.log(didMount);
+    };
+  }, [didMount]);
 
   return (
     <>

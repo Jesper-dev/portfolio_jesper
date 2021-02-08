@@ -8,53 +8,80 @@ const GithubApi = () => {
   const [img, setImg] = useState({});
   const [bio, setBio] = useState("");
   const [repo, setRepo] = useState([]);
-  const [url, setUrl] = useState("")
+  const [url, setUrl] = useState("");
+
+  const [loading, setLoading] = useState(true);
+  const [didMount, setDidMount] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("https://api.github.com/users/JesperKYH")
-      .then((res) => {
-        setName(res.data.name);
-        setImg(res.data.avatar_url);
-        setBio(res.data.bio);
-        setUrl(res.data.html_url)
-        console.log(res.data)
-      })
-      .catch((err) => console.log(err));
+    setDidMount(true);
+    const fetchDataUser = async () => {
+      await axios
+        .get("https://api.github.com/users/JesperKYH")
+        .then((res) => {
+          setName(res.data.name);
+          setImg(res.data.avatar_url);
+          setBio(res.data.bio);
+          setUrl(res.data.html_url);
 
-    axios
-      .get("https://api.github.com/users/JesperKYH/repos")
-      .then((res) => {
-        setRepo(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+          setLoading(false);
+        })
+        .catch((err) => console.log(err));
+    };
+
+    const fetchDataRepo = async () => {
+      await axios
+        .get("https://api.github.com/users/JesperKYH/repos")
+        .then((res) => {
+          setRepo(res.data);
+        })
+        .catch((err) => console.log(err));
+    };
+
+    fetchDataUser();
+    fetchDataRepo();
+
+    return () => {
+      setDidMount(false);
+      console.log(didMount);
+    };
+  }, [didMount]);
 
   return (
     <>
-      <Title>GithubAPI</Title>
-      <Wrapper>
-        <Name><AName target="_blank" rel="noreferrer" href={url}>{name}</AName></Name>
-        <Img src={img} />
-        <Bio>{bio}</Bio>
-      </Wrapper>
-      <RepoWrapper>
-        {repo.map(function (item, i) {
-          return (
-            <RepoItem key={i}>
-              <TextName>
-                Repo:{" "}
-                <A target="_blank" rel="noreferrer" href={item.html_url}>
-                  {item.name}
-                </A>{" "}
-              </TextName>
-              <Language>
-                Language: <LanguageSpan>{item.language}</LanguageSpan>
-              </Language>
-            </RepoItem>
-          );
-        })}
-      </RepoWrapper>
+      {loading ? (
+        <p>API Loading...</p>
+      ) : (
+        <>
+          <Title>GithubAPI</Title>
+          <Wrapper>
+            <Name>
+              <AName target="_blank" rel="noreferrer" href={url}>
+                {name}
+              </AName>
+            </Name>
+            <Img src={img} />
+            <Bio>{bio}</Bio>
+          </Wrapper>
+          <RepoWrapper>
+            {repo.map(function (item, i) {
+              return (
+                <RepoItem key={i}>
+                  <TextName>
+                    Repo:{" "}
+                    <A target="_blank" rel="noreferrer" href={item.html_url}>
+                      {item.name}
+                    </A>{" "}
+                  </TextName>
+                  <Language>
+                    Language: <LanguageSpan>{item.language}</LanguageSpan>
+                  </Language>
+                </RepoItem>
+              );
+            })}
+          </RepoWrapper>
+        </>
+      )}
     </>
   );
 };

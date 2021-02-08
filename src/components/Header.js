@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-scroll";
-import computerMinimalist from "../img/computer.png";
-import computerScreen from "../img/computerscreen-transparent.png";
 import styled from "styled-components";
 import TextChanger from "./TextChanger";
 
@@ -102,7 +100,7 @@ const Button = styled.button`
   }
 `;
 
-const Text = styled.p`
+const Text = styled.div`
   margin: 10px;
 
   @media (max-width: 400px) {
