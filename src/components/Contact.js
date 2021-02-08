@@ -77,7 +77,11 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   background-color: #222831;
-  clip-path: polygon(0 0, 100% 27%, 100% 100%, 0 100%, 0% 38%);
+  clip-path: polygon(0 0, 0 0, 100% 18%, 100% 100%, 0 100%, 0% 50%);
+
+
+
+
 
   @media (max-width: 400px) {
     width: 100vw;

@@ -25,14 +25,14 @@ const Wrapper = styled.div`
   align-items: flex-start;
 
   @media (max-width: 400px) {
-    width: 200px;
-    height: 230px;
+    width: 140px;
+    height: 190px;
   }
 `;
 
 const Img = styled.img`
   @media (max-width: 400px) {
-    width: 150px !important;
+    width: 140px !important;
     height: 100px !important;
   }
 `;

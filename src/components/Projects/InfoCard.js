@@ -43,8 +43,8 @@ const Text = styled.p`
   opacity: 100%;
 
   @media (max-width: 400px) {
-    font-size: 1rem;
-    width: 150px;
+    font-size: 0.8rem;
+    width: 120px;
     margin: 0;
   }
 `;
@@ -65,8 +65,8 @@ const Button = styled.button`
   @media (max-width: 400px) {
     cursor: none;
     padding: 2px 2px;
-    width: 120px;
-    height: 35px;
+    width: 110px;
+    height: 30px;
     font-size: 16px;
     margin-top: 10%;
   }

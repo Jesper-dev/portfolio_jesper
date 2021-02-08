@@ -2,6 +2,7 @@ import React from "react";
 import WorkCard from "./WorkCard";
 import quireLogo from "../../img/quireLogo.png";
 import apiLogo from "../../img/gutenberg-api-transparent.png";
+import culcitra from "../../img/culcitra.png"
 import styled from "styled-components";
 
 const MyWork = () => {
@@ -25,8 +26,17 @@ const MyWork = () => {
           img={apiLogo}
           text="A site that shows three different apis"
           url="http://gutenberg-api.surge.sh/"
-          alt="http://gutenberg-api.surge.sh/"
+          alt="Showing the logo of API-central"
           style={apiLogoStyle}
+          icon={iconReact}
+        />
+
+        <WorkCard
+          img={culcitra}
+          text="Culcitra is a card game me and one of my friends made"
+          url="http://culcitra.surge.sh/"
+          alt="Showing logo of Culcitra"
+          style={culcitraLogoStyle}
           icon={iconReact}
         />
       </ProjectsWrapper>
@@ -56,9 +66,9 @@ const ProjectsWrapper = styled.div`
   width: 100%;
 
   @media (max-width: 400px) {
-    height: 80%;
+    height: 100vh;
     width: 100vw;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     align-items: center;
   }
 `;
@@ -68,6 +78,10 @@ const Title = styled.h1`
   justify-self: flex-start;
   margin: 0;
   font-size: 3rem;
+
+  @media (max-width: 400px) {
+    font-size: 3rem;
+  }
 `;
 
 const Ijs = styled.i`
@@ -75,7 +89,8 @@ const Ijs = styled.i`
   font-size: 2rem;
 
   @media (max-width: 400px) {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    margin-top: 2%;
   }
 `;
 
@@ -84,22 +99,20 @@ const Ireact = styled.i`
   font-size: 2rem;
 
   @media (max-width: 400px) {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    margin-top: 2%;
   }
 `;
 
-// const quireLogoStyle = styled.img`
-//   width: 330px;
-//   margin: 0 auto;
-
-//   @media (max-width: 400px) {
-//     width: 50px;
-//     height: 140px;
-//   }
-// `;
 
 const quireLogoStyle = {
   width: "330px",
+  margin: "0 auto",
+};
+
+const culcitraLogoStyle = {
+  width: "320px",
+  height: "140px",
   margin: "0 auto",
 };
 
