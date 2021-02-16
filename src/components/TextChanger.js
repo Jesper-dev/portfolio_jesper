@@ -5,7 +5,7 @@ const TextChanger = () => {
   const [index, setIndex] = useState(0);
   const [didMount, setDidMount] = useState(false);
 
-  const texts = ["React", "JavaScript", "Front-End"];
+  const texts = ["React", "Front-End", "VueJS"];
 
   useEffect(() => {
     setDidMount(true);

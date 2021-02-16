@@ -5,12 +5,12 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     console.log(message, name, email);
-    
+
     const templateId = "template_6uvtk0r";
     sendEmail(templateId, {
       message: message,
@@ -21,14 +21,13 @@ const Contact = () => {
     setEmail("");
     setMessage("");
     setName("");
-    setShow(true)
+    setShow(true);
 
     setTimeout(() => {
-      setShow(false)
+      setShow(false);
     }, 3000);
   };
 
-  
   const sendEmail = (templateId, varibles) => {
     window.emailjs
       .send("service_sndqnnb", templateId, varibles)
@@ -41,7 +40,9 @@ const Contact = () => {
   return (
     <Wrapper>
       <Title>Hit me up!</Title>
-      <VerSpan style={show ? {display: "inline"} : {display: "none"}}>Message Sent! I will get back to you shortly...</VerSpan>
+      <VerSpan style={show ? { display: "inline" } : { display: "none" }}>
+        Message Sent! I will get back to you shortly...
+      </VerSpan>
       <Form onSubmit={onFormSubmit}>
         <Input
           value={name}
@@ -79,10 +80,6 @@ const Wrapper = styled.div`
   background-color: #222831;
   clip-path: polygon(0 0, 0 0, 100% 18%, 100% 100%, 0 100%, 0% 50%);
 
-
-
-
-
   @media (max-width: 400px) {
     width: 100vw;
     margin-top: 0%;
@@ -94,7 +91,7 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   color: #fff;
-`
+`;
 
 const Form = styled.form`
   font-family: "Rubik", sans-serif;
@@ -178,8 +175,7 @@ const VerSpan = styled.span`
 
   @media (max-width: 400px) {
     font-size: 1rem;
-
   }
-`
+`;
 
 export default Contact;

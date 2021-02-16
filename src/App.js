@@ -32,6 +32,7 @@ body{
   margin: 0;
   background-color: rgb(229, 229, 229);
   font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
 
   @media (max-width: 400px) {
     max-width: 100vmax;
