@@ -33,7 +33,7 @@ const MyWork = () => {
 
         <WorkCard
           img={culcitra}
-          text="Culcitra is a card game me and my friend Jon made"
+          text="Culcitra is a card game me and my friend Jon made to learn React"
           url="http://culcitra.surge.sh/"
           alt="Showing logo of Culcitra"
           style={culcitraLogoStyle}
