@@ -7,7 +7,6 @@ const GithubApiPage = () => {
   return (
     <>
       <Nav />
-
       <PageWrapper>
         <GithubApi />
       </PageWrapper>

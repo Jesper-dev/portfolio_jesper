@@ -17,14 +17,14 @@ const MyWork = () => {
           img={quireLogo}
           text="A note app me and my group Gutenberg did as a school assignment"
           url="http://gutenberg-quire.surge.sh/"
-          alt="A project me and my group gutenberg did as a school assignment"
+          alt="Showing the logo of Quire"
           style={quireLogoStyle}
           icon={iconJs}
         />
 
         <WorkCard
           img={apiLogo}
-          text="A site that shows three different apis that me and my friend Jon did."
+          text="A site that shows three different apis that me and my friend Jon made"
           url="http://gutenberg-api.surge.sh/"
           alt="Showing the logo of API-central"
           style={apiLogoStyle}
