@@ -43,7 +43,6 @@ const GithubApi = () => {
 
     return () => {
       setDidMount(false);
-      console.log(didMount);
     };
   }, [didMount]);
 

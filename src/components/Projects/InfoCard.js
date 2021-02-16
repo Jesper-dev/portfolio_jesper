@@ -75,6 +75,7 @@ const Button = styled.button`
 const IconWrapper = styled.div`
   width: 90%;
   height: 30px;
+  margin-bottom: 7%;
   display: flex;
   flex-flow: row wrap;
 

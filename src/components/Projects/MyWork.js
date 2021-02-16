@@ -1,8 +1,8 @@
 import React from "react";
 import WorkCard from "./WorkCard";
 import quireLogo from "../../img/quireLogo.png";
-import apiLogo from "../../img/gutenberg-api-transparent.png";
-import culcitra from "../../img/culcitra.png"
+import apiLogo from "../../img/APICentral2.png";
+import culcitra from "../../img/culcitra.png";
 import styled from "styled-components";
 
 const MyWork = () => {
@@ -24,7 +24,7 @@ const MyWork = () => {
 
         <WorkCard
           img={apiLogo}
-          text="A site that shows three different apis"
+          text="A site that shows three different apis that me and my friend Jon did."
           url="http://gutenberg-api.surge.sh/"
           alt="Showing the logo of API-central"
           style={apiLogoStyle}
@@ -33,7 +33,7 @@ const MyWork = () => {
 
         <WorkCard
           img={culcitra}
-          text="Culcitra is a card game me and one of my friends made"
+          text="Culcitra is a card game me and my friend Jon made"
           url="http://culcitra.surge.sh/"
           alt="Showing logo of Culcitra"
           style={culcitraLogoStyle}
@@ -87,6 +87,7 @@ const Title = styled.h1`
 const Ijs = styled.i`
   color: yellow;
   font-size: 2rem;
+  margin-top: 3%;
 
   @media (max-width: 400px) {
     font-size: 0.9rem;
@@ -104,7 +105,6 @@ const Ireact = styled.i`
   }
 `;
 
-
 const quireLogoStyle = {
   width: "330px",
   margin: "0 auto",
@@ -117,8 +117,8 @@ const culcitraLogoStyle = {
 };
 
 const apiLogoStyle = {
-  width: "200px",
-  height: "143px",
+  width: "320px",
+  height: "150px",
   margin: "0 auto",
 };
 
