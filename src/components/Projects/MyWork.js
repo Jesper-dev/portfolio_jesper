@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import WorkCard from "./WorkCard";
 import quireLogo from "../../img/quireLogo.png";
 import apiLogo from "../../img/APICentral2.png";
@@ -9,11 +9,46 @@ const MyWork = () => {
   let iconReact = <Ireact className="fab fa-react"></Ireact>;
   let iconJs = <Ijs className="fab fa-js"></Ijs>;
 
+  const [showCard, setShowCard] = useState(false);
+  const [cardShowing, setCardShowing] = useState(false);
+  let array = [];
+
+  const onClickBtn = (e) => {
+    setShowCard(true);
+  };
+
   return (
     <Wrapper>
       <Title>My Projects</Title>
       <ProjectsWrapper>
-        <WorkCard
+        <Group>
+          <Btn onClick={onClickBtn}>Quire</Btn>
+          <div style={showCard ? { display: "block" } : { display: "none" }}>
+            <WorkCard
+              img={quireLogo}
+              text="A note app me and my group Gutenberg did as a school assignment"
+              url="http://gutenberg-quire.surge.sh/"
+              alt="Showing the logo of Quire"
+              imgStyle={quireLogoStyle}
+              icon={iconJs}
+            />
+          </div>
+        </Group>
+
+        <Group>
+          <Btn onClick={() => setShowCard(!showCard)}>API Central</Btn>
+          <div style={showCard ? { display: "block" } : { display: "none" }}>
+            <WorkCard
+              img={apiLogo}
+              text="A site that shows three different apis that me and my friend Jon made"
+              url="http://gutenberg-api.surge.sh/"
+              alt="Showing the logo of API-central"
+              imgStyle={apiLogoStyle}
+              icon={iconReact}
+            />
+          </div>
+        </Group>
+        {/* <WorkCard
           img={quireLogo}
           text="A note app me and my group Gutenberg did as a school assignment"
           url="http://gutenberg-quire.surge.sh/"
@@ -38,7 +73,7 @@ const MyWork = () => {
           alt="Showing logo of Culcitra"
           style={culcitraLogoStyle}
           icon={iconReact}
-        />
+        /> */}
       </ProjectsWrapper>
     </Wrapper>
   );
@@ -61,7 +96,9 @@ const Wrapper = styled.div`
 
 const ProjectsWrapper = styled.div`
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-evenly;
+  align-items: center;
   height: 50%;
   width: 100%;
 
@@ -70,6 +107,36 @@ const ProjectsWrapper = styled.div`
     width: 100vw;
     flex-flow: row wrap;
     align-items: center;
+  }
+`;
+
+const Group = styled.div`
+  width: 20%;
+  height: 20%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 400px) {
+    height: 100%;
+  }
+`;
+
+const Btn = styled.button`
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  height: 50px;
+  width: 180px;
+  margin: 16px;
+  cursor: pointer;
+
+  &:hover {
+    width: 200px;
   }
 `;
 

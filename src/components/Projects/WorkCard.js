@@ -1,25 +1,26 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import InfoCard from "./InfoCard";
 
-const WorkCard = ({ img, text, url, alt, style, icon }) => {
+const WorkCard = ({ img, text, url, alt, imgStyle, icon }) => {
   const [hover, setHover] = useState(false);
   return (
     <>
       <Wrapper>
-        <Img src={img} alt={alt} style={style} />
+        <Img src={img} alt={alt} style={imgStyle} />
         <InfoCard text={text} url={url} icon={icon} />
 
         <BtnWrapper>
-        <a target="_blank" rel="noreferrer" href={url}>
-        <Button
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          Visit website {hover ? <i className="fas fa-arrow-right"></i> : ""}
-        </Button>
-      </a>
-      </BtnWrapper>
+          <a target="_blank" rel="noreferrer" href={url}>
+            <Button
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+            >
+              Visit website{" "}
+              {hover ? <i className="fas fa-arrow-right"></i> : ""}
+            </Button>
+          </a>
+        </BtnWrapper>
       </Wrapper>
     </>
   );
@@ -58,14 +59,14 @@ const BtnWrapper = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const Button = styled.button`
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   width: 160px;
   padding: 7px 7px;
-  
+
   height: 42px;
   background: none;
   border: 2px solid rgb(255, 255, 255);
