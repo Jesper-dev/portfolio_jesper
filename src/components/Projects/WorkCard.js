@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   align-items: flex-start;
 
   @media (max-width: 400px) {
-    width: 140px;
+    width: 150px;
     height: 190px;
   }
 `;

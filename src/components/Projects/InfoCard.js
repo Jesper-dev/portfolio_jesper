@@ -36,8 +36,8 @@ const Text = styled.p`
 
   @media (max-width: 400px) {
     font-size: 0.8rem;
-    width: 120px;
-    height: 70px;
+    width: 130px;
+    height: 80px;
     margin: 0;
   }
 `;
