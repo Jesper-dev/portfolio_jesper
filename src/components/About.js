@@ -1,6 +1,7 @@
 import React from "react";
 import profile from "../img/profile.jpg";
 import styled from "styled-components";
+import LanguagesAndTools from "./LanguagesAndTools";
 
 const About = () => {
   return (
@@ -30,6 +31,7 @@ const About = () => {
             hearing from you and I hope we can achieve amazing things together!
           </Text>
         </Wrapper2>
+        <LanguagesAndTools />
       </Section>
     </Wrapper>
   );
@@ -37,13 +39,13 @@ const About = () => {
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  height: 700px;
+  height: 1200px;
   display: flex;
   justify-content: center;
   background-color: #222831;
 
   @media (max-width: 400px) {
-    height: 100vh;
+    height: 1200px;
     width: 100vw;
     flex-flow: column nowrap;
   }
@@ -67,11 +69,13 @@ const Section = styled.section`
   flex-flow: column nowrap;
   align-items: center;
   width: 70%;
+  height: 100vh;
   color: rgb(255, 255, 255);
   font-family: "Roboto Slab", serif;
 
   @media (max-width: 400px) {
     width: 100vw;
+    height: 100%;
   }
 `;
 
@@ -91,6 +95,7 @@ const Text = styled.p`
   @media (max-width: 400px) {
     width: 400px;
     font-size: 1rem;
+    margin: 8px;
   }
 `;
 

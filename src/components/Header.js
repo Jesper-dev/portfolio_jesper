@@ -50,7 +50,7 @@ const Title = styled.h1`
   font-family: "Rubik", sans-serif;
 
   @media (max-width: 400px) {
-    font-size: 34px;
+    font-size: 30px;
   }
 `;
 

@@ -3,7 +3,7 @@ import WorkCard from "./WorkCard";
 import quireLogo from "../../img/quireLogo.png";
 import apiLogo from "../../img/APICentral2.png";
 import culcitra from "../../img/culcitra.png";
-import photoportfolio from "../../img/photoportfolio.png"
+import photoportfolio from "../../img/photoportfolio.png";
 import styled from "styled-components";
 
 const MyWork = () => {
@@ -22,7 +22,6 @@ const MyWork = () => {
     <Wrapper>
       <Title>My Projects</Title>
       <ProjectsWrapper>
-
         <WorkCard
           img={quireLogo}
           text="A note app me and my group Gutenberg did as a school assignment"
@@ -96,7 +95,7 @@ const Title = styled.h1`
   font-size: 3rem;
 
   @media (max-width: 400px) {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
 `;
 
