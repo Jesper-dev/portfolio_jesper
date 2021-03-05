@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   background-color: #222831;
 
   @media (max-width: 400px) {
-    height: 1200px;
+    height: 1400px;
     width: 100vw;
     flex-flow: column nowrap;
   }
