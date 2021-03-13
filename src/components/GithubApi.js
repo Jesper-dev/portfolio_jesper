@@ -84,6 +84,7 @@ const GithubApi = () => {
             <Btn value="CSS">CSS</Btn>
             <Btn value="Vue">Vue</Btn>
             <Btn value="JavaScript">JavaScript/React</Btn>
+            <Btn value="Python">Python</Btn>
             <Btn value="all">Show All</Btn>
             <Btn value="none">Show None</Btn>
           </FilterWrapper>
