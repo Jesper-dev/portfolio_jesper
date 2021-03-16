@@ -13,7 +13,7 @@ function Footer() {
         <Icon
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/JesperKYH"
+          href="https://github.com/Jesper-dev"
         >
           <i className="fab fa-github"></i>
         </Icon>

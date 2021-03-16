@@ -18,7 +18,7 @@ const GithubApi = () => {
     setDidMount(true);
     const fetchDataUser = async () => {
       await axios
-        .get("https://api.github.com/users/JesperKYH")
+        .get("https://api.github.com/users/Jesper-dev")
         .then((res) => {
           setName(res.data.name);
           setImg(res.data.avatar_url);
@@ -32,7 +32,7 @@ const GithubApi = () => {
 
     const fetchDataRepo = async () => {
       await axios
-        .get("https://api.github.com/users/JesperKYH/repos")
+        .get("https://api.github.com/users/Jesper-dev/repos")
         .then((res) => {
           console.log(res.data);
           setRepo(res.data);
