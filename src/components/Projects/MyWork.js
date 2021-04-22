@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import WorkCard from "./WorkCard";
 import quireLogo from "../../img/quireLogo.png";
-import apiLogo from "../../img/APICentral2.png";
+import letsVest from "../../img/letsvest-t.png";
 import culcitra from "../../img/culcitra.png";
 import photoportfolio from "../../img/photoportfolio.png";
 import styled from "styled-components";
@@ -31,10 +31,10 @@ const MyWork = () => {
         />
 
         <WorkCard
-          img={apiLogo}
-          text="A site that shows three different apis that me and my friend Jon made"
-          url="http://gutenberg-api.surge.sh/"
-          alt="Showing the logo of API-central"
+          img={letsVest}
+          text="This is the project im most proud of. This is a investment site with focus on gameification, and much more..."
+          url="http://lets-vest.surge.sh/"
+          alt="Showing the logo of Lets Vest"
           imgStyle={apiLogoStyle}
         />
 
@@ -133,7 +133,7 @@ const culcitraLogoStyle = {
 
 const apiLogoStyle = {
   width: "320px",
-  height: "150px",
+  height: "120px",
   margin: "0 auto",
 };
 
