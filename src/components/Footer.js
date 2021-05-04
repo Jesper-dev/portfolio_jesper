@@ -24,7 +24,7 @@ function Footer() {
         >
           <i className="fab fa-linkedin-in"></i>
         </Icon>
-        <Icon href="mailto:jesper.pettersson00@hotmail.com">
+        <Icon href="mailto:jesper@jesperp.se">
           <i className="far fa-envelope"></i>
         </Icon>
       </IconWrapper>
