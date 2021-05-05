@@ -10,6 +10,7 @@ const LanguagesAndTools = () => {
     "Vue/Nuxt",
     "Strapi",
     "Firebase/Firestore",
+    "Express",
   ];
   return (
     <Wrapper>

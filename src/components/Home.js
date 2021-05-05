@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import About from "./About";
-import Contact from "./Contact";
 import Footer from "./Footer";
 import Header from "./Header";
 import Projects from "./Projects/Projects";
@@ -15,7 +14,6 @@ const Home = () => {
       <Main>
         <About />
         <Projects />
-        <Contact />
       </Main>
       <Footer />
     </>

@@ -5,7 +5,13 @@ const TextChanger = () => {
   const [index, setIndex] = useState(0);
   const [didMount, setDidMount] = useState(false);
 
-  const texts = ["React", "Front-End", "Vue/Nuxt"];
+  const texts = [
+    "React",
+    "Front-End",
+    "Vue/Nuxt",
+    "Express",
+    "Firebase/Firestore",
+  ];
 
   useEffect(() => {
     setDidMount(true);

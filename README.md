@@ -1,10 +1,18 @@
 # Portfolio made by Jesper Pettersson
 
-## Made with
+![picture of my website](pictures/readmePicPortfolio.png)
+
+## Features
+
+- **See projects i've made**
+- **Different ways to contact me**
+- **See repos on my github**
+
+### Stuff i used
 
 - **React**
 - **Styled Components**
 - **Axios**
-- **EmailJS**
+- **Github API**
 
-### [Website](http://jesper-portfolio.surge.sh/)
+### [Website](https://www.jesperp.se)

@@ -29,6 +29,8 @@ const About = () => {
             Down below you can find my finished work and I also have a Github
             page where you can find a list of my repos. I look forward to
             hearing from you and I hope we can achieve amazing things together!
+            Email me at:{" "}
+            <a href="mailto:jesper@jesperp.se">jesper@jesperp.se</a>
           </Text>
         </Wrapper2>
         <LanguagesAndTools />
@@ -61,6 +63,15 @@ const Wrapper2 = styled.div`
   @media (max-width: 400px) {
     width: 320px;
     height: 80vh;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    opacity: 50%;
   }
 `;
 

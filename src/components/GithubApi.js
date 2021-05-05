@@ -52,9 +52,9 @@ const GithubApi = () => {
 
   const onBtnClick = (e) => {
     let name = e.target.value;
-    if (name == "all") {
+    if (name === "all") {
       setFilterRepo(repo);
-    } else if (name == "none") {
+    } else if (name === "none") {
       setFilterRepo([]);
     } else {
       newArray = repo.filter(function (repo) {
